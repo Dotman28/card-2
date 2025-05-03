@@ -63,41 +63,23 @@
 <body>
   <div class="card">
     <h1>🎉 You're Invited!</h1>
-    <p class="details" id="invite-text">
-      Loading invitation...
-    </p>
-
-    <div class="qr">
-      <img id="qr-code" src="" alt="QR Code Invitation"/>
-      <p>📱 Scan this code at the entrance</p>
-    </div>
-  </div>
-
-  <script>
-    // Get URL parameter
-    const params = new URLSearchParams(window.location.search);
-    const guestName = params.get("name") || "Guest";
-
-    // Format message
-    const inviteText = `
-      Dear <strong>${guestName}</strong>,<br/>
+    <p class="details">
+      Dear <strong>Chief Mike Akhigbe</strong>,<br/>
       You are warmly invited to celebrate the birthday of<br/>
       <strong>Barrister Esther Otsabomhe</strong><br/>
       📍 <strong>Lagos Continental Hotel</strong><br/>
       🏢 52a Kofo Abayomi St, Victoria Island, Lagos<br/>
       🕒 <strong>3:00 PM</strong><br/>
       🗓️ <strong>May 4, 2025</strong>
-    `;
+    </p>
 
-    // Inject into the page
-    document.getElementById("invite-text").innerHTML = inviteText;
-
-    // Create QR message
-    const qrMessage = `Name: ${guestName}\nYou are invited to Barrister Esther Otsabomhe's Birthday Party at Lagos Continental Hotel, 52a Kofo Abayomi St, Victoria Island, Lagos at 3PM on May 4, 2025. Welcome!`;
-
-    // Encode and set QR code image
-    const qrUrl = "https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=" + encodeURIComponent(qrMessage);
-    document.getElementById("qr-code").src = qrUrl;
-  </script>
+    <div class="qr">
+      <img
+        src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=Name: Chief Mike Akhigbe%0AYou are invited to Barrister Esther Otsabomhe's Birthday Party at Lagos Continental Hotel, 52a Kofo Abayomi St, Victoria Island, Lagos at 3PM on May 4, 2025. Welcome!"
+        alt="QR Code Invitation"
+      />
+      <p>📱 Scan this code at the entrance</p>
+    </div>
+  </div>
 </body>
 </html>
